@@ -1,0 +1,12 @@
+{
+    "name": "nagatakei/composertest",
+    "require": {
+        "nesbot/carbon": "^2.46"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "App\\" : "app/"
+        }
+    }
+}
