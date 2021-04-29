@@ -163,7 +163,13 @@ if(!empty($_POST['btn_submit'])){
     <?php endif; ?>
 
     <?php if($pageFlag === 2):?>
-        <?php if($_POST['csrf'] === $_SESSION['csrfToken']): ?>    
+        <?php if($_POST['csrf'] === $_SESSION['csrfToken']): ?>  
+
+        
+        <?php require '../maintenance/insert.php'; //DB接続
+           insertContact($_POST); 
+        ;?>
+        
            <p>送信が完了しました。</p>
            <?php unset($_SESSION['csrfToken']); ?>
         <?php endif; ?>
